@@ -115,6 +115,7 @@
 
 \def\supervisor#1{\gdef\@supervisor{#1}}
 \def\revisor#1{\gdef\@revisor{#1}}
+\def\sinodo#1{\gdef\@sinodo{#1}}
 
 \def\prevdegrees#1{\gdef\@prevdegrees{#1}}
 \def\@prevdegrees{}
@@ -138,8 +139,10 @@
 
 \supervisor{supervisor undefined}
 \revisor{ }
+\sinodo{ }
 \degree{degree undefined}
 \degreeyear{degreeyear undefined}
+
 
 %% Define all the environments needed for the frontmatter
 %% The make* are command versions of every environment,
@@ -222,7 +225,8 @@ PRESENTA:\\[3pt]
 {\scshape\@author}\par
 \vfill
 {\small DIRECTORA DE TESIS:\\{\scshape\@supervisor}}\par
-{\small REVISORA DE TESIS:\\{\scshape\@revisor}}\par
+{\small REVISOR DE TESIS:\\{\scshape\@revisor}}\par
+{\small SINODALES:\\{\scshape\par\@sinodo}}\par
 \vfill
 {\scshape\@ifundefined{@city}{\relax}{\@city\hfill}\@ifundefined{@degreemonth}{\@degreeyear}{\@degreemonth, \@degreeyear}}
 \end{minipage}
